@@ -1,0 +1,74 @@
+.pagination{
+    margin: 0 auto;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.pagination > .page-item,
+.pagination > .page-item-breack{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+    color: aliceblue;
+    cursor: pointer;
+}
+
+.pagination > .page-item.active{
+    background-color: aliceblue;
+    color: #292929;
+    border-radius: 50%;
+}
+
+.pagination > .page-item-breack{
+    background-color: transparent;
+    color: aliceblue;
+}
+
+.pagination .arrow-prev,
+.pagination .arrow-next{
+    position: relative;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+
+
+.pagination .arrow-prev.disabled,
+.pagination .arrow-next.disabled{
+    opacity: .3;
+}
+
+.pagination .arrow-prev > a,
+.pagination .arrow-next > a{
+    position: absolute;
+    font-size: 0;
+    width: 40px;
+    height: 40px;
+}
+
+
+.pagination .arrow-prev::before,
+.pagination .arrow-next::before{
+    content: "";
+    position: absolute;
+    width: 25%;
+    height: 25%;
+    border-right: 2px solid aliceblue;
+    border-bottom: 2px solid aliceblue;
+    left: 50%;
+    top: 50%;
+}
+
+.pagination .arrow-prev::before{
+    transform: translate(-50%, -50%) rotate(135deg);
+}
+
+.pagination .arrow-next::before{
+    transform: translate(-50%, -50%) rotate(-40deg);
+}
